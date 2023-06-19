@@ -41,7 +41,7 @@ namespace Catalog.DAL.Implementation
             await _context.Set<T>().AddRangeAsync(newEntities);
         }
 
-        public async Task Delete<T>(Guid id) where T : class 
+        public async Task Delete<T>(Guid id) where T : class, IEntitry
         {
             var activeEntity = await _context.Set<T>().FirstOrDefaultAsync(x => x.Id == id);
             activeEntity.IsActive = false;

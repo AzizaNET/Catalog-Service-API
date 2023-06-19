@@ -16,7 +16,7 @@ namespace Catalog.DAL.Contracts
         Task<Guid> Add<T>(T newEntity) where T : class, IEntitry ;
         Task AddRange<T>(IEnumerable<T> newEntities) where T : class;
 
-        Task Delete<T>(Guid entity) where T : class;
+        Task Delete<T>(Guid entity) where T : class, IEntitry;
 
         Task Remove<T>(T entity) where T : class;
         Task RemoveRange<T>(IEnumerable<T> entities) where T : class;

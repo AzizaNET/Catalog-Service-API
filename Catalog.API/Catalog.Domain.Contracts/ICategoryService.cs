@@ -9,11 +9,12 @@ namespace Catalog.Domain.Contracts
 {
     public interface ICategoryService
     {
-        Task<CategoryModel> Create(CategoryModel category);
+        Task<Guid> Create(CategoryModel category);
 
         IEnumerable<CategoryModel> GetAll();
-        Task<CategoryModel> Get(int id);
+        
+        CategoryModel Get(Guid id);
         Task<Guid> Update(CategoryModel category);
-        Task Delete(int id);
+        Task Delete(Guid id);
     }
 }

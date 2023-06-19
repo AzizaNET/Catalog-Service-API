@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Catalog.DAL.Contracts.Entities
 {
-    public class CategoryEntity
+    public class CategoryEntity : BaseEntity
     {
         public int CategoryId { get; set; }
 

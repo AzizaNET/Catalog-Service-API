@@ -22,9 +22,9 @@ namespace Catalog.API.Controllers
             return Ok(res);
         }
         [HttpGet("id")]
-        public async Task<ActionResult<CategoryModel>> Get(int id)
+        public ActionResult<CategoryModel> Get(Guid id)
         {
-            var res = await _categoryService.Get(id);
+            var res = _categoryService.Get(id);
 
             if (res == null) return BadRequest("Product not found!");
 
@@ -52,7 +52,7 @@ namespace Catalog.API.Controllers
         }
 
         [HttpDelete("id")]
-        public async Task<ActionResult> Delete(int id)
+        public async Task<ActionResult> Delete(Guid id)
         {
             await _categoryService.Delete(id);
             return Ok();
