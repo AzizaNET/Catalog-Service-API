@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Catalog.DAL.Contracts.Entities
 {
-    public class BaseEntity
+    public class BaseEntity : IEntitry
     {
         public Guid Id { get; set; }
         public bool IsActive { get; set; } = true;
-        public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
-        public DateTime? UpdatedDate { get; set; }
+        public DateTime DateCreated { get; set; } = DateTime.Now;
+        public DateTime? DateUpdated { get; set; }
     }
 }
