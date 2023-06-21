@@ -14,5 +14,6 @@ namespace Catalog.DAL.Contracts.Entities
         public string ItemDescription { get; set; } = string.Empty;
 
         public CategoryEntity Category { get; set; }
+        public CategoryEntity Category1 { get; set; }
     }
 }
