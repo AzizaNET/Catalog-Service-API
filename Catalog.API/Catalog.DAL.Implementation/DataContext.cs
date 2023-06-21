@@ -18,9 +18,8 @@ namespace Catalog.DAL.Implementation
         }
         public async Task<int> SaveChangesAsync()
         {
-            return await base.SaveChangesAsync();
+            return await base.SaveChangesAsync(); 
         }
-
         public DbSet<T> DbSet<T>() where T : class
         {
             return Set<T>();

@@ -64,6 +64,7 @@ namespace Catalog.Domain.Implementations
             await _dbRepository.Delete<CategoryEntity>(id);
             await _dbRepository.SaveChangesAsync();
         }
+
         
     }
 }
